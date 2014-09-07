@@ -21,7 +21,7 @@
                       :ns "rage.main",
                       :class "rage.main",
                       :filters [{:filter "reload_filter"}]
-                      :services [{:service "main" :url-pattern  "/main/*"}
+                      :services [{:service "main" :url-pattern  "/*"}
                                               ]}
                      ;; {:servlet "user",
                      ;;  :src "rage/user_servlet.clj"
@@ -58,7 +58,7 @@
                       ;; :exclude {:pattern "bar/**"}
                       }
           }
-  :aot [#"main" #".*filter"]
+  :aot ["rage.main" #".*filter"]
   :resource-paths ["src/"]
   :web-inf "war/WEB-INF"
   :source-paths ["src/clj"]
@@ -72,6 +72,9 @@
                  [compojure "1.1.8"]
                  [ring "1.3.1"]
                  [clj-http "1.0.0"] ;; http client lib
+                 [hiccup "1.0.5"]
+                 [ring/ring-json "0.3.1"]
+                 [cheshire "5.3.1"] ;; json parse
                  ;; [ring/ring-servlet "1.2.0"]
 		 ;; [ring/ring-core "1.3.1"]
                  ;; [migae/migae-env "0.1.0-SNAPSHOT"]
@@ -82,7 +85,7 @@
                  ;; [migae/migae-mail "0.1.0-SNAPSHOT"]
                  ;; [migae/migae-memcache "0.1.0-SNAPSHOT"]
                  ;; [migae/migae-taskqueues "0.1.0-SNAPSHOT"]
-                 ;; [migae/migae-urlfetch "0.1.0-SNAPSHOT"]
+                 [migae/urlfetch "0.1.0-SNAPSHOT"]
                  ;; [migae/migae-user "0.1.0-SNAPSHOT"]
                  [log4j "1.2.17" :exclusions [javax.mail/mail
                                               javax.jms/jms
