@@ -1,12 +1,16 @@
-*.class
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+/src/rage/mojio.clj
+/target
+/lib
+/classes
+/checkouts
+/war
+/tmp
+pom.xml
+pom.xml.asc
 *.jar
-*.war
-*.ear
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+*.class
+.lein-deps-sum
+.lein-failures
+.lein-plugins
+.lein-repl-history
+.dir-locals.el
