@@ -1,4 +1,6 @@
-(ns rage.mojio)
+(ns rage.mojio
+
+(def ^:dynamic *api-tok* (atom ""))
 
 ;; SECRET KEYS
 ;;
